@@ -215,6 +215,58 @@
       margin-top: 0.75rem;
       text-align: center;
     }
+
+    .dataset-sources {
+      margin: 2rem auto 0;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.06);
+    }
+
+    .dataset-sources-title {
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: #1e293b;
+      margin-bottom: 0.5rem;
+    }
+
+    .dataset-sources ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .dataset-sources li {
+      padding: 0.6rem 0;
+      border-bottom: 1px solid #f1f5f9;
+      color: #475569;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .dataset-sources li:last-child {
+      border-bottom: none;
+    }
+
+    .dataset-sources li strong {
+      color: #1e293b;
+    }
+
+    .dataset-sources a {
+      color: #1a73e8;
+      font-weight: 600;
+    }
+
+    .dataset-sources a:hover {
+      text-decoration: underline;
+    }
+
+    .dataset-sources a .icon {
+      font-size: 0.7rem;
+      vertical-align: baseline;
+    }
   </style>
 
   <!-- Structured Data -->
@@ -294,10 +346,9 @@
                     </a>
                   </span>
                   <span class="link-block">
-                    <a href="https://huggingface.co/datasets/Pocket-Dentist/Pocket-Dentist-Bench" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark" data-track="dataset">
+                    <a href="#datasets" class="external-link button is-normal is-rounded is-dark" data-track="dataset">
                       <span class="icon"><i class="fas fa-database"></i></span>
-                      <span>Dataset</span>
+                      <span>Datasets</span>
                     </a>
                   </span>
                 </div>
@@ -383,71 +434,32 @@
     </section>
 
     <!-- Benchmark Datasets -->
-    <section class="section hero is-light">
+    <section class="section hero is-light" id="datasets">
       <div class="hero-body">
         <div class="container is-max-desktop">
-          <h2 class="title is-3 has-text-centered">Benchmark Datasets</h2>
-          <p class="has-text-centered" style="margin-bottom: 0.5rem; color: #555;">
-            Three heterogeneous dental benchmarks spanning panoramic radiography and intraoral photography, reformulated
-            into standardized prompt–response QA pairs covering five clinical tasks.
-          </p>
-          <div class="benchmark-table dataset-table">
-            <table>
-              <thead>
-                <tr>
-                  <th>Dataset</th>
-                  <th>Modality</th>
-                  <th>Task</th>
-                  <th>Primary Metric</th>
-                  <th>Train</th>
-                  <th>Val</th>
-                  <th>Test</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="model-name"><strong>BRAR</strong></td>
-                  <td>Panoramic Radiograph</td>
-                  <td>Classification</td>
-                  <td>Macro F1</td>
-                  <td>691</td>
-                  <td>148</td>
-                  <td>149</td>
-                </tr>
-                <tr>
-                  <td class="model-name" rowspan="3"><strong>MetaDent</strong></td>
-                  <td rowspan="3">Intraoral Photo</td>
-                  <td>VQA</td>
-                  <td>Accuracy</td>
-                  <td rowspan="3">7,238</td>
-                  <td rowspan="3">906</td>
-                  <td rowspan="3">2,301</td>
-                </tr>
-                <tr>
-                  <td>Captioning</td>
-                  <td>BERTScore F1</td>
-                </tr>
-                <tr>
-                  <td>Classification</td>
-                  <td>Macro F1</td>
-                </tr>
-                <tr>
-                  <td class="model-name"><strong>DR</strong></td>
-                  <td>Panoramic Radiograph</td>
-                  <td>Classification</td>
-                  <td>Macro F1</td>
-                  <td>1,075</td>
-                  <td>121</td>
-                  <td>73</td>
-                </tr>
-              </tbody>
-            </table>
+          <h2 class="title is-3 has-text-centered">Datasets</h2>
+          <div class="dataset-sources">
+            <ul>
+              <li>
+                <strong>BRAR</strong> — Multimodal panoramic radiographs for periodontal bone resorption grading.
+                <a href="https://doi.org/10.1038/s41597-025-06400-y" target="_blank" rel="noopener">Xia et al.,
+                  <em>Scientific Data</em> (2025) <span class="icon"><i class="fas fa-external-link-alt"></i></span></a>
+              </li>
+              <li>
+                <strong>MetaDent</strong> — Expert-labeled intraoral photographs for vision–language models in
+                dentistry.
+                <a href="https://doi.org/10.1177/00220345261424242" target="_blank" rel="noopener">Li et al.,
+                  <em>Journal of Dental Research</em> (2026) <span class="icon"><i
+                      class="fas fa-external-link-alt"></i></span></a>
+              </li>
+              <li>
+                <strong>DR</strong> — Community-contributed collection of panoramic dental X-rays.
+                <a href="https://www.kaggle.com/datasets/imtkaggleteam/dental-radiography" target="_blank"
+                  rel="noopener">Dental Radiography Dataset, Kaggle (2023) <span class="icon"><i
+                      class="fas fa-external-link-alt"></i></span></a>
+              </li>
+            </ul>
           </div>
-          <p class="table-caption">
-            <strong>Table 1.</strong> Summary of benchmark datasets and task formulations. All tasks are evaluated with
-            seven complementary metrics spanning answer quality, output reliability, memory usage, and inference
-            latency.
-          </p>
         </div>
       </div>
     </section>

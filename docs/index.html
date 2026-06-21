@@ -51,6 +51,15 @@
   <meta name="theme-color" content="#1a73e8">
   <meta name="apple-mobile-web-app-capable" content="yes">
 
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-R7WYW79LNN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-R7WYW79LNN');
+  </script>
+
   <title>Pocket-Dentist | On-Device Dental VLM</title>
 
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
@@ -985,6 +994,37 @@
   <button class="scroll-to-top" onclick="scrollToTop()" aria-label="Scroll to top">
     <i class="fas fa-arrow-up"></i>
   </button>
+
+  <!-- Resource / outbound link click tracking (GA4) -->
+  <script>
+    document.addEventListener('click', function (e) {
+      // Find the closest <a> ancestor (handles clicks on child <span>/<i>)
+      var link = e.target.closest('a');
+      if (!link || !link.href) return;
+
+      // Links with data-track="xxx" (Paper / Code / Datasets) -> custom event
+      var trackLabel = link.getAttribute('data-track');
+      if (trackLabel) {
+        gtag('event', 'click_resource', {
+          resource_type: trackLabel,
+          link_url: link.href
+        });
+        return;
+      }
+
+      // All other external links -> auto-tracked as outbound
+      try {
+        var linkHost = new URL(link.href).hostname;
+        if (linkHost && linkHost !== location.hostname) {
+          gtag('event', 'click_outbound', {
+            link_url: link.href,
+            link_domain: linkHost,
+            link_text: link.textContent.trim().substring(0, 100)
+          });
+        }
+      } catch (err) { }
+    });
+  </script>
 
 </body>
 

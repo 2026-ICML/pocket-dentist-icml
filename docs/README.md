@@ -45,7 +45,10 @@ python3 -m http.server 8123
   ```
 - **Deployment screenshot** is `reference/arXiv/assets/deployment.png`.
 
+## Links
+
+- **Paper:** https://arxiv.org/abs/2605.29299 (wired into the hero **Paper** button).
+
 ## TODO before publishing
 
-- Add the **Paper** PDF/arXiv link in the hero (currently `#`).
 - Confirm the **Dataset** link (Hugging Face).

@@ -45,6 +45,8 @@
   <meta name="citation_author" content="Dang, Ting">
   <meta name="citation_author" content="Jia, Hong">
   <meta name="citation_publication_date" content="2026">
+  <meta name="citation_arxiv_id" content="2605.29299">
+  <meta name="citation_pdf_url" content="https://arxiv.org/pdf/2605.29299">
 
   <meta name="theme-color" content="#1a73e8">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -528,6 +530,7 @@
                 </tr>
                 <tr class="mean-row">
                   <td>Mean</td>
+                  <td></td>
                   <td>0.403</td>
                   <td>0.279</td>
                   <td>0.249</td>
@@ -629,6 +632,7 @@
                 </tr>
                 <tr class="mean-row">
                   <td>Mean</td>
+                  <td></td>
                   <td>0.410</td>
                   <td>0.244</td>
                   <td>0.156</td>
@@ -707,6 +711,7 @@
                 </tr>
                 <tr class="mean-row">
                   <td>Mean</td>
+                  <td></td>
                   <td>0.441</td>
                   <td>0.339</td>
                   <td>0.492</td>
@@ -808,6 +813,7 @@
                 </tr>
                 <tr class="mean-row">
                   <td>Mean</td>
+                  <td></td>
                   <td>0.461</td>
                   <td>0.407</td>
                   <td>0.560</td>
@@ -902,18 +908,18 @@
           <h2 class="title is-3 has-text-centered">Key Findings</h2>
           <div class="content">
             <ul>
-              <li>🔍 <strong>Zero-shot fragmentation</strong> — No single VLM dominates across all dental tasks;
+              <li><strong>Zero-shot fragmentation</strong> — No single VLM dominates across all dental tasks;
                 zero-shot
                 evaluation alone is unreliable for deployment decisions.</li>
-              <li>📈 <strong>LoRA adaptation closes the gap</strong> — Under a uniform low-cost budget, compact VLMs
+              <li><strong>LoRA adaptation closes the gap</strong> — Under a uniform low-cost budget, compact VLMs
                 become competitive with much larger open-weight models on most metrics.</li>
-              <li>🏆 <strong>InternVL3.5-2B is the strongest compact model</strong> — It matches or outperforms 7B–32B
+              <li><strong>InternVL3.5-2B is the strongest compact model</strong> — It matches or outperforms 7B–32B
                 open-weight models on 4 of 5 primary metrics after LoRA.</li>
-              <li>📱 <strong>Pocket-Dentist-2B runs locally</strong> — 4.31s latency and 2.62 GB RAM, 100% offline on an
+              <li><strong>Pocket-Dentist-2B runs locally</strong> — 4.31s latency and 2.62 GB RAM, 100% offline on an
                 iPhone 17 Pro (4.9× faster, 2.3× lighter than the 7B baseline).</li>
-              <li>🏥 <strong>Medical pre-training ≠ dental performance</strong> — Biomedical-pretrained models
+              <li><strong>Medical pre-training ≠ dental performance</strong> — Biomedical-pretrained models
                 (medgemma, paligemma2) do not consistently beat general-purpose models after dental-domain LoRA.</li>
-              <li>⚠️ <strong>Reliability matters</strong> — Some larger models suffer format collapse (classification
+              <li><strong>Reliability matters</strong> — Some larger models suffer format collapse (classification
                 F1=0) under the uniform budget, wasting the same compute as correct outputs.</li>
             </ul>
           </div>
@@ -931,13 +937,14 @@
             <span class="copy-text">Copy</span>
           </button>
         </div>
-        <pre><code id="bibtex-code">@inproceedings{bian2026pocketdentist,
-  title     = {Pocket-Dentist: On-Device Dental Image Understanding via
-               Efficient Multimodal Large Language Models},
-  author    = {Bian, Kai and Guo, Xucheng and Chen, Bin and Ruan, Lingyan and
-               Shen, Yiran and Dang, Ting and Jia, Hong},
-  booktitle = {ICML 2026 Workshop on Efficient Multimodal QA (EMM-QA)},
-  year      = {2026}
+        <pre><code id="bibtex-code">@misc{bian2026pocketdentistondevicedentalimage,
+      title={Pocket-Dentist: On-Device Dental Image Understanding via Efficient Multimodal Large Language Models},
+      author={Kai Bian and Xucheng Guo and Bin Chen and Lingyan Ruan and Yiran Shen and Ting Dang and Hong Jia},
+      year={2026},
+      eprint={2605.29299},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2605.29299},
 }</code></pre>
       </div>
     </section>

@@ -1,2 +1,5 @@
 # pocket-dentist-icml
-2026 ICML EMM-QA Workshop
+
+The codebase, curated QA pairs, prompts, parsers, and deployment scripts are currently undergoing anonymization and compliance review. We will release them shortly.
+
+

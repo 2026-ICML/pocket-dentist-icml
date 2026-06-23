@@ -26,7 +26,7 @@ Icons render as inline SVG via `fontawesome.all.min.js`, so no icon webfonts are
 2. **Settings → Pages → Build and deployment**: set *Source* = **Deploy from a branch**,
    *Branch* = `main`, *Folder* = `/docs`.
 3. The page will be served at `https://<user>.github.io/pocket-dentist-icml/`
-   (for this repo: https://kyle17888.github.io/pocket-dentist-icml/).
+   (for this repo: https://2026-icml.github.io/pocket-dentist-icml/).
 
 ## Local preview
 

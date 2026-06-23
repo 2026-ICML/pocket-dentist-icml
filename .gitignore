@@ -1,5 +1,7 @@
 reference
 .playwright-mcp
+.clude/
+CLAUDE.md
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

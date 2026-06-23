@@ -1,0 +1,20 @@
+# Pocket-Dentist — reproducibility kit (parsers, QA loaders, deployment aggregation).
+# Pinned to the versions used for the paper.
+
+# QA loaders + parsers/metrics
+json_repair==0.48.0
+scikit-learn==1.7.2
+numpy==2.3.4
+pandas==2.3.3
+PyYAML==6.0.3
+tqdm==4.67.1
+Pillow==12.0.0
+
+# Captioning metric: BERTScore (roberta-large)
+bert-score==0.3.13
+torch==2.7.0
+transformers==4.56.2
+
+# Optional: LLM-as-judge captioning + running inference against an
+# OpenAI-compatible endpoint (vLLM / OpenAI / Gemini proxy)
+openai==2.6.1

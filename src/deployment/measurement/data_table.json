@@ -1,0 +1,64 @@
+{
+  "_description": "Aggregated on-device deployment metrics for Table 4. All latency/throughput values are per-sample averages across N samples (10 per task \u00d7 3 tasks = 30). CPU is averaged across per-task averages; RAM is the peak across tasks.",
+  "_generated_by": "aggregate_deployment.py",
+  "dataset": "MetaDent",
+  "models": [
+    {
+      "model": "Pocket-Dentist-2B (SLM)",
+      "n_samples": 30,
+      "n_tasks": 3,
+      "tasks": [
+        "MetaDent Captioning",
+        "MetaDent Classification",
+        "MetaDent VQA"
+      ],
+      "ttft_s": 0.76,
+      "itps": 447.95,
+      "oet_s": 3.55,
+      "otps": 30.58,
+      "total_s": 4.31,
+      "cpu_pct": 64.06,
+      "ram_gb": 2.62,
+      "device": "iPhone",
+      "ios_version": "26.3.1"
+    },
+    {
+      "model": "InternVL2.5-4B (SLM)",
+      "n_samples": 30,
+      "n_tasks": 3,
+      "tasks": [
+        "MetaDent Captioning",
+        "MetaDent Classification",
+        "MetaDent VQA"
+      ],
+      "ttft_s": 1.64,
+      "itps": 202.8,
+      "oet_s": 4.94,
+      "otps": 21.09,
+      "total_s": 6.58,
+      "cpu_pct": 51.22,
+      "ram_gb": 3.08,
+      "device": "iPhone",
+      "ios_version": "26.3.1"
+    },
+    {
+      "model": "Qwen2.5-VL-7B (Baseline)",
+      "n_samples": 30,
+      "n_tasks": 3,
+      "tasks": [
+        "MetaDent Captioning",
+        "MetaDent Classification",
+        "MetaDent VQA"
+      ],
+      "ttft_s": 4.88,
+      "itps": 68.98,
+      "oet_s": 16.25,
+      "otps": 9.17,
+      "total_s": 21.13,
+      "cpu_pct": 42.85,
+      "ram_gb": 6.03,
+      "device": "iPhone",
+      "ios_version": "26.3.1"
+    }
+  ]
+}
